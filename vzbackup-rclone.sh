@@ -5,7 +5,7 @@
 dumpdir="/var/lib/vz/dump" # Set this to where your vzdump files are stored
 MAX_AGE=3 # This is the age in days to keep local backup copies. Local backups older than this are deleted.
 RCLONE_CONFIG="secret" # This is what rclone config should be used
-RCLONE_CONFIG_PATH="${RCLONE_CONFIG_PATH}"
+RCLONE_CONFIG_PATH="${RCLONE_CONFIG_PATH:-/root/.config/rclone/rclone.conf}" # This is the rclone config file path. Usually leave default
 ############ /END CONFIG
 
 _bdir="$dumpdir"
